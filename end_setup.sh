@@ -17,7 +17,7 @@ arch_setup()
     pacman -Syu xfce4 lightdm nvim vim wget curl zsh
     localectl set-keymap fr
     localectl set-x11-keymap fr
-    systemctl enable sshd
+    systemctl enable ssh
     cp data/host /etc/hosts
     cp data/ssh /etc/ssh/sshd_config
     cp data/sudo_arch /etc/sudoers
@@ -37,7 +37,7 @@ debian_setup()
     apt install cinnamon neovim wget curl zsh
     localectl set-keymap fr
     localectl set-x11-keymap fr
-    systemctl enable sshd
+    systemctl enable ssh
     cp data/host /etc/hosts
     cp data/ssh /etc/ssh/sshd_config
     cp data/sudo_deb /etc/sudoers
@@ -51,9 +51,10 @@ server_setup()
 {
     cp data/host_server /etc/hosts
     cp data/ssh /etc/ssh/sshd_config
-    apt install apache2 phpmyadmin mysql php-mysql
+    apt install apache2 phpmyadmin mysql-server php-mysql
     systemctl enable apache2
-    systemctl enable sshd
+    systemctl enable ssh
+    systemctl enable php
     cp data/virtualhost_intra /etc/apache2/site-avaible/intra.conf
     cp data/virtualhost_intra_adm /etc/apache2/site-avaible/intra_adm.conf
     mkdir /var/www/intra/{intra,intra_adm}
