@@ -59,11 +59,11 @@ server_setup()
     cp data/virtualhost_intra_adm /etc/apache2/site-avaible/intra_adm.conf
     mkdir /var/www/intra/{intra,intra_adm}
     chown -R $USER:$USER /var/www/intra/
-    a2ensite intra.conf
-    a2ensite intra_adm.conf
-    a2diss
+    a2dissite 000-default.conf
     cp data/intra.html /var/www/intra/intra/index.html
     cp data/intra_adm.html /var/www/intra/intra_adm/index.html
+    a2ensite intra.conf
+    a2ensite intra_adm.conf
     check_shell
     cp data/zsh /home/kwaegle/.zshrc
 
