@@ -1,0 +1,3 @@
+root    ALL=(ALL) ALL
+hadrien ALL=(vincent) ALL
+vincent ALL=(hadrien) ALL

@@ -1,0 +1,5 @@
+# Static table lookup for hostnames.
+# See hosts(5) for details.
+127.0.0.1	localhost
+10.18.206.235   intra.asrlab.lan
+10.18.206.235   intra-adm.asrlab.lan

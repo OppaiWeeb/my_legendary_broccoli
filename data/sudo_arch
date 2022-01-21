@@ -1,0 +1,5 @@
+root ALL=(ALL) ALL
+
+romain	ALL=(ALL) ALL
+
+@includedir /etc/sudoers.d
